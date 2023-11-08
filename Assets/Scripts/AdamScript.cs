@@ -6,6 +6,7 @@ public class AdamScript : MonoBehaviour
 {
     public float moveSpeed = 20f;
     private Rigidbody2D rb;
+    public Animator animator;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class AdamScript : MonoBehaviour
     {
         Move();
         FaceMouseCursor();
+        FireGun();
 
     }
 
@@ -24,9 +26,29 @@ public class AdamScript : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveX, moveY);
-
-        rb.velocity = movement * moveSpeed;
+        if (Mathf.Abs(moveX) > 0 || Mathf.Abs(moveY) > 0)
+        {
+            Vector2 movement = new Vector2(moveX, moveY);
+            animator.SetFloat("Speed", movement.magnitude);
+            rb.velocity = movement * moveSpeed;
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+            rb.velocity = Vector2.zero;
+        }
+    }
+    void FireGun()
+    {
+        if (Input.GetMouseButton(0) && animator.GetBool("Shoot") == false)
+        {
+            animator.SetBool("Shoot", true);
+            
+        }
+        else
+        {
+            animator.SetBool("Shoot", false);
+        }
     }
 
     void FaceMouseCursor()
@@ -40,5 +62,7 @@ public class AdamScript : MonoBehaviour
         );
 
         transform.up = direction;
+        //the character sprite is facing the wrong way so this is an awkward fix for that
+        transform.Rotate(0, 0, 90);
     }
 }
