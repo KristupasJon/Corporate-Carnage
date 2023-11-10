@@ -7,12 +7,12 @@ public class StartScript : MonoBehaviour
 {
     void Start()
     {
-        Application.targetFrameRate = Screen.currentResolution.refreshRate;
+        Application.targetFrameRate = 60;
     }
 
     public void GoToGameScene()
     {
-        Application.targetFrameRate = Screen.currentResolution.refreshRate;
+        Application.targetFrameRate = 60;
         SceneManager.LoadScene(1);
         Debug.Log("Game Started!\n");
     }
