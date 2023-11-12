@@ -5,25 +5,29 @@ using UnityEngine;
 public class AdamScript : MonoBehaviour
 {
 
-    // todo
+    // todo:
     // make it so that the game deosnt crash when the player dies
-    // make the player die when colliding with zombies
-    // add sounds manager ig
+    // add sounds manager
     // add background music
     // improve zombie ai and player tracking around objects
 
     public float moveSpeed = 20f;
     public float sprintSpeed = 1000f;
-    public int health = 50;
+    public int health = 10;
+    public bool alive = true;
     private Rigidbody2D rb;
     public Animator animator;
     private Vector2 movement;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    private bool isCooldown = false; // Flag to check if invunerability is active
+    private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Log("test!");
     }
 
     void Update()
@@ -40,6 +44,44 @@ public class AdamScript : MonoBehaviour
     {
         Move();
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Killable") == true && !isCooldown)
+        {
+            health = health - 10;
+            if (health <= 0)
+            {
+                Debug.Log("ADAM IS DEAD!");
+                alive = false;
+            }
+            if(health > 0)
+            {
+                StartCoroutine(DamageCooldown());
+            }
+        }
+    }
+
+    IEnumerator DamageCooldown()
+    {
+        isCooldown = true; // Set cooldown flag to true
+        float endTime = Time.time + 3.0f; // Set the end time for the cooldown
+
+        // Blinking effect
+        while (Time.time < endTime)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds
+        }
+
+        spriteRenderer.enabled = true; // Make sure the sprite is visible at the end of the cooldown
+        isCooldown = false; // Set cooldown flag to false
+    }
+
+    /*void ChangeHealth(int x)
+    {
+        health += x;
+    }*/
 
     void Move()
     {

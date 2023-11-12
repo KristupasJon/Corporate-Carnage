@@ -526,6 +526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 200
   sprintSpeed: 250
+  health: 10
+  alive: 1
   animator: {fileID: 1382593375}
   bulletPrefab: {fileID: 1623267342386404939, guid: 237fa05dfe489594fb37a7dab37963f9, type: 3}
   firePoint: {fileID: 151792530}
