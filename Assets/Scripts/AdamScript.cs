@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class AdamScript : MonoBehaviour
 {
+
+    // todo
+    // make it so that the game deosnt crash when the player dies
+    // make the player die when colliding with zombies
+    // add sounds manager ig
+    // add background music
+    // improve zombie ai and player tracking around objects
+
     public float moveSpeed = 20f;
     public float sprintSpeed = 1000f;
+    public int health = 50;
     private Rigidbody2D rb;
     public Animator animator;
     private Vector2 movement;

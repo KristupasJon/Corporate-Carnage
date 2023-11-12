@@ -5,10 +5,19 @@ using UnityEngine;
 public class HandgunBulletScript : MonoBehaviour
 {
     public float speed = 20f;
+    public float dissapearTimer = 2f;
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Killable") || collision.gameObject.CompareTag("Indestruct"))
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {
         transform.position += (transform.up * speed) * Time.deltaTime;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, dissapearTimer);
     }
 }
