@@ -6,8 +6,8 @@ public class AdamScript : MonoBehaviour
 {
 
     // todo:
+    // shooting animation doesnt work =(
     // make it so that the game deosnt crash when the player dies
-    // add sounds manager
     // add background music
     // improve zombie ai and player tracking around objects
 
@@ -21,6 +21,8 @@ public class AdamScript : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     private bool isCooldown = false; // Flag to check if invunerability is active
+    public AudioClip gunShotSound;
+    public AudioClip gettingPunchedSound;
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
     void Start()
@@ -35,9 +37,9 @@ public class AdamScript : MonoBehaviour
         FaceMouseCursor();
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            FireGun();
         }
-        FireGun();
+        
     }
 
     void FixedUpdate()
@@ -47,12 +49,16 @@ public class AdamScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //change this later, to either more descriptive tags or simply a sound manager
         if (collision.gameObject.CompareTag("Killable") == true && !isCooldown)
         {
-            health = health - 10;
+            AudioSource.PlayClipAtPoint(gettingPunchedSound, transform.position, 1);
+            ChangeHealth(-10);
             if (health <= 0)
             {
+                //display a game over screen here
                 Debug.Log("ADAM IS DEAD!");
+                Destroy(gameObject);
                 alive = false;
             }
             if(health > 0)
@@ -70,18 +76,18 @@ public class AdamScript : MonoBehaviour
         // Blinking effect
         while (Time.time < endTime)
         {
-            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
-            yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+            yield return new WaitForSeconds(0.1f);
         }
 
         spriteRenderer.enabled = true; // Make sure the sprite is visible at the end of the cooldown
-        isCooldown = false; // Set cooldown flag to false
+        isCooldown = false;
     }
 
-    /*void ChangeHealth(int x)
+    void ChangeHealth(int x)
     {
         health += x;
-    }*/
+    }
 
     void Move()
     {
@@ -112,13 +118,12 @@ public class AdamScript : MonoBehaviour
 
     void FireGun()
     {
-        if (Input.GetMouseButton(0) && animator.GetBool("Shoot") == false)
+        if (Input.GetMouseButton(0))
         {
+            //the shoot animation doesnt work...
             animator.SetBool("Shoot", true);
-
-        }
-        else
-        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1); // Play the gunshot sound
             animator.SetBool("Shoot", false);
         }
     }
@@ -136,10 +141,5 @@ public class AdamScript : MonoBehaviour
         transform.up = direction;
         //the character sprite is facing the wrong way so this is an awkward fix for that
         transform.Rotate(0, 0, 90);
-    }
-
-    void Shoot()
-    {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

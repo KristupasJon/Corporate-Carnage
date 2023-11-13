@@ -341,7 +341,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -526,11 +526,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 200
   sprintSpeed: 250
-  health: 10
+  health: 100
   alive: 1
   animator: {fileID: 1382593375}
   bulletPrefab: {fileID: 1623267342386404939, guid: 237fa05dfe489594fb37a7dab37963f9, type: 3}
   firePoint: {fileID: 151792530}
+  gunShotSound: {fileID: 8300000, guid: 276a56c85677b0b4d8c5dec0271d2bca, type: 3}
+  gettingPunchedSound: {fileID: 8300000, guid: 4c0405a0eb90295408273704e1310690, type: 3}
 --- !u!95 &1382593375
 Animator:
   serializedVersion: 5
