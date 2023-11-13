@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AdamScript : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class AdamScript : MonoBehaviour
     // add background music
     // improve zombie ai and player tracking around objects
 
-    public float moveSpeed = 20f;
-    public float sprintSpeed = 1000f;
-    public int health = 10;
+    public float moveSpeed = 200f;
+    public float sprintSpeed = 250f;
+    public int health = 100;
     public bool alive = true;
+    public Text healthUI;
+    public Text bulletUI;
     private Rigidbody2D rb;
     public Animator animator;
     private Vector2 movement;
@@ -23,13 +26,19 @@ public class AdamScript : MonoBehaviour
     private bool isCooldown = false; // Flag to check if invunerability is active
     public AudioClip gunShotSound;
     public AudioClip gettingPunchedSound;
+    public AudioClip handgunReloadSound;
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
+    public int bulletsInClip = 10;
+    public int maxBulletsInClip = 10;
+    public bool isReloading = false;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Debug.Log("test!");
+        bulletsInClip = maxBulletsInClip;
+        InitUI();
     }
 
     void Update()
@@ -39,12 +48,42 @@ public class AdamScript : MonoBehaviour
         {
             FireGun();
         }
-        
+        if (Input.GetKey(KeyCode.R))
+        {
+            Reload();
+        }
+
+    }
+
+    void InitUI()
+    {
+        healthUI.text = health.ToString();
+        bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
     }
 
     void FixedUpdate()
     {
         Move();
+    }
+
+    void Reload()
+    {
+        if (!isReloading)
+        {
+            StartCoroutine(ReloadCoroutine());
+        }
+    }
+
+    IEnumerator ReloadCoroutine()
+    {
+        isReloading = true;
+        // Play reload sound
+        AudioSource.PlayClipAtPoint(handgunReloadSound, transform.position, 1);
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(2);
+        bulletsInClip = maxBulletsInClip;
+        bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
+        isReloading = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -87,6 +126,7 @@ public class AdamScript : MonoBehaviour
     void ChangeHealth(int x)
     {
         health += x;
+        healthUI.text = health.ToString();
     }
 
     void Move()
@@ -118,12 +158,14 @@ public class AdamScript : MonoBehaviour
 
     void FireGun()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isReloading && bulletsInClip != 0)
         {
             //the shoot animation doesnt work...
             animator.SetBool("Shoot", true);
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1); // Play the gunshot sound
+            bulletsInClip--;
+            bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
             animator.SetBool("Shoot", false);
         }
     }

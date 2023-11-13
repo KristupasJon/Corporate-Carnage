@@ -1,0 +1,1367 @@
+fileFormatVersion: 2
+guid: 8e7c798a0b1b2bb4ea7eea800f32eb6e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 900
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cdbf6b5e379644380c7b5b43c145e1
+      internalID: 1827410452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 949
+        width: 32
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7640b78ae39dae24f82e61dc452b3ec7
+      internalID: -1646920926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 900
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadf4f3bfad02bd43b95ae06663d9b4a
+      internalID: 1412542900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 901
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df8b981c02ab54aa2ff12b7748587f
+      internalID: -418133639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 975
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d1c85d462c2624f9ae1b994089550e
+      internalID: -1695008459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 901
+        width: 48
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf307c8d7c195647a39eb1e8a6bcab0
+      internalID: -1398527215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 901
+        width: 47
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4586eb448c743d428be43d90973c860
+      internalID: -556282209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_7
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 900
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054cdccb98d19ec4dbf83a1d456cb29a
+      internalID: -356195380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 768
+        width: 61
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4673d80c5704ae41aa7983977630b9a
+      internalID: -905579174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 771
+        width: 48
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c8407b0b9cf084abcf11343767b4d3
+      internalID: 397789945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 768
+        width: 62
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e62ab9bdc315e499183ad1f84c8c6f
+      internalID: -2130178239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 772
+        width: 47
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5791870b6c763546b5d1bdc39e8e811
+      internalID: -108804167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 769
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c205d573c055f4ba25c84d768be699
+      internalID: -917561788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_13
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 772
+        width: 48
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1544919dbf85b504cac18a1f82667be4
+      internalID: 257182386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_14
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 773
+        width: 49
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a8b03f76a913241bd5c8d6a38796af
+      internalID: 157623746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_15
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 782
+        width: 47
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4fc89df64df124c8810f3319237804
+      internalID: 1705777181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 645
+        width: 47
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0282eb39269e7047bdbebfb5704fb8e
+      internalID: -94202821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 648
+        width: 47
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe545b802074114584cdbad619af7bd
+      internalID: -264110630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_18
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 640
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46d4fbf01d6a4b47ad31ce8419b13e1
+      internalID: 755345412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 63
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138d8986820133949b423a8e61425bc8
+      internalID: -1278284578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 645
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4eda0f1bec86884ca1c89a9412b325d
+      internalID: 117816517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 644
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4489df134cc0a1f428223230d18a860e
+      internalID: -1868609577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_22
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 644
+        width: 48
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e448e5a25f37e224682310a1f3a13b18
+      internalID: 1884737042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_23
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 653
+        width: 47
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851158a1c9b66bd46aa521917e37fa61
+      internalID: -2087893651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 62
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f764f924aa52dd4f9eba5873da806cc
+      internalID: 899032486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 513
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ed7a0e96ec2b146a1dd05701db705f
+      internalID: -1539503810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_26
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 514
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790f5731d132b5443a8e48a51806c583
+      internalID: -1540268936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_27
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 513
+        width: 61
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8685a5e0a064344a593bb33a469f1d
+      internalID: -654852750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_28
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 516
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8d7e95cf8145b4e8153465a1470d08
+      internalID: -45177289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_29
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 516
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd0f4d9c75681542aa3441b2b44ac19
+      internalID: -1395305942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e2975af77f54443889a6d2397bdf10
+      internalID: 1361488543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_31
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 512
+        width: 63
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aa46b66d0a31843b1c45e40f134e98
+      internalID: -426038052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 389
+        width: 59
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22780f9b1ca9da47abf832385361e5a
+      internalID: 1252738175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_33
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 392
+        width: 59
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33faa272e782b21409fef123a20241c8
+      internalID: -1583158741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_34
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 387
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cefff4bd402c944b4f2687289732c5
+      internalID: -1058938213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_35
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 393
+        width: 57
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b02da0f5481ab4f8fe951321175724
+      internalID: 1156036046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 63
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3ab40232c19a4d8801816cd3c9518
+      internalID: -1825442211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 62
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f32796a6a014b648b59abe957931a86
+      internalID: 565662152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_38
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 384
+        width: 61
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbb4152fa0cb2f4785653a23f9a1178
+      internalID: -1010829737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_39
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 384
+        width: 61
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f0b408311e3c6419c4419c8f621126
+      internalID: -92370814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89088dd83d10ccf459df18cdd3fb77e8
+      internalID: -30748657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 257
+        width: 46
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bca871c694c3c4a820235ac33f869b
+      internalID: 1157522643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 264
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408e33e74fefcb648a1b93f82791b0c5
+      internalID: -1985892294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_43
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 257
+        width: 46
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3904dc335e5e4a04f83df95adf044f43
+      internalID: -539292068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_44
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 259
+        width: 47
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba72960dc1146445870e23afc8e08db
+      internalID: 1707634507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_45
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 260
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d252a8f9aea0d4c4597edb291a81b26e
+      internalID: 1106890251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_46
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 260
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8968898f3c2b442b94d747ce2a1995
+      internalID: 745648811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_47
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 260
+        width: 47
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3736ad76dc161341a5c7851cba13933
+      internalID: -2134919637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 128
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d0eb60b1d99ef4084193472ab603b9
+      internalID: 1409892179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f752a91f24b14a45ab28fc7fb4c5354
+      internalID: -1840761753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 129
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8bcd9d662ce084896d451ce07e3a06
+      internalID: -521517968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_51
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04a2ffc9edb5c541854d81589e6114c
+      internalID: 1429990926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 136
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4c307d872d2cd4e9d31fe34d74913e
+      internalID: 1661766840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_53
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 136
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fe6092fd6a6d141b3041f170a9142f
+      internalID: 1607096928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_54
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 137
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2766a5697d1923745ad5bcee3cc2bb17
+      internalID: 2138174575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileObjectsRubbleWalls_55
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 136
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82847b37c330eac47ad807e424967d5f
+      internalID: -1553548827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TileObjectsRubbleWalls_0: 1827410452
+      TileObjectsRubbleWalls_1: -1646920926
+      TileObjectsRubbleWalls_10: -2130178239
+      TileObjectsRubbleWalls_11: -108804167
+      TileObjectsRubbleWalls_12: -917561788
+      TileObjectsRubbleWalls_13: 257182386
+      TileObjectsRubbleWalls_14: 157623746
+      TileObjectsRubbleWalls_15: 1705777181
+      TileObjectsRubbleWalls_16: -94202821
+      TileObjectsRubbleWalls_17: -264110630
+      TileObjectsRubbleWalls_18: 755345412
+      TileObjectsRubbleWalls_19: -1278284578
+      TileObjectsRubbleWalls_2: 1412542900
+      TileObjectsRubbleWalls_20: 117816517
+      TileObjectsRubbleWalls_21: -1868609577
+      TileObjectsRubbleWalls_22: 1884737042
+      TileObjectsRubbleWalls_23: -2087893651
+      TileObjectsRubbleWalls_24: 899032486
+      TileObjectsRubbleWalls_25: -1539503810
+      TileObjectsRubbleWalls_26: -1540268936
+      TileObjectsRubbleWalls_27: -654852750
+      TileObjectsRubbleWalls_28: -45177289
+      TileObjectsRubbleWalls_29: -1395305942
+      TileObjectsRubbleWalls_3: -418133639
+      TileObjectsRubbleWalls_30: 1361488543
+      TileObjectsRubbleWalls_31: -426038052
+      TileObjectsRubbleWalls_32: 1252738175
+      TileObjectsRubbleWalls_33: -1583158741
+      TileObjectsRubbleWalls_34: -1058938213
+      TileObjectsRubbleWalls_35: 1156036046
+      TileObjectsRubbleWalls_36: -1825442211
+      TileObjectsRubbleWalls_37: 565662152
+      TileObjectsRubbleWalls_38: -1010829737
+      TileObjectsRubbleWalls_39: -92370814
+      TileObjectsRubbleWalls_4: -1695008459
+      TileObjectsRubbleWalls_40: -30748657
+      TileObjectsRubbleWalls_41: 1157522643
+      TileObjectsRubbleWalls_42: -1985892294
+      TileObjectsRubbleWalls_43: -539292068
+      TileObjectsRubbleWalls_44: 1707634507
+      TileObjectsRubbleWalls_45: 1106890251
+      TileObjectsRubbleWalls_46: 745648811
+      TileObjectsRubbleWalls_47: -2134919637
+      TileObjectsRubbleWalls_48: 1409892179
+      TileObjectsRubbleWalls_49: -1840761753
+      TileObjectsRubbleWalls_5: -1398527215
+      TileObjectsRubbleWalls_50: -521517968
+      TileObjectsRubbleWalls_51: 1429990926
+      TileObjectsRubbleWalls_52: 1661766840
+      TileObjectsRubbleWalls_53: 1607096928
+      TileObjectsRubbleWalls_54: 2138174575
+      TileObjectsRubbleWalls_55: -1553548827
+      TileObjectsRubbleWalls_6: -556282209
+      TileObjectsRubbleWalls_7: -356195380
+      TileObjectsRubbleWalls_8: -905579174
+      TileObjectsRubbleWalls_9: 397789945
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
