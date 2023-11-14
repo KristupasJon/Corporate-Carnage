@@ -6,6 +6,9 @@ public class ZombieSpawnerScript : MonoBehaviour
 {
     public GameObject prefabToSpawn; // The prefab to spawn
     public Transform target; // The target for the zombies to chase
+    public AudioClip gotShotSound;
+    public GameObject bloodObject; // the blood object to spawn when shot
+    public GameObject deathBloodObject; // the blood object to spawn when dies
     public float spawnInterval = 3.0f; // The time interval between spawns
 
     private float timeSinceLastSpawn;
@@ -24,6 +27,9 @@ public class ZombieSpawnerScript : MonoBehaviour
             
             // Assign the target to the zombie
             zombieAI.target = target;
+            zombieAI.gotShotSound = gotShotSound;
+            zombieAI.bloodObject = bloodObject;
+            zombieAI.deathBloodObject = deathBloodObject;
 
             timeSinceLastSpawn = 0f;
         }

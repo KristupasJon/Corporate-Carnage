@@ -5,6 +5,9 @@ using UnityEngine;
 public class ZombieAI : MonoBehaviour
 {
     public Transform target; // the object to chase
+    public AudioClip gotShotSound;
+    public GameObject bloodObject; // the blood object to spawn when shot
+    public GameObject deathBloodObject; // the blood object to spawn when dies
     public float speed = 2.0f; // speed of the zombie
     public int health = 20;
 
@@ -13,8 +16,13 @@ public class ZombieAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             health -= 10;
+            AudioSource.PlayClipAtPoint(gotShotSound, transform.position, 0.2f);
+            Instantiate(bloodObject, new Vector3(transform.position.x, transform.position.y, 2), Quaternion.identity); // spawn blood object
+            speed *= 0.5f;
+
             if (health <= 0)
             {
+                Instantiate(deathBloodObject, new Vector3(transform.position.x, transform.position.y, 2), Quaternion.identity); // spawn death blood object
                 Destroy(gameObject);
             }
         }
@@ -40,7 +48,6 @@ public class ZombieAI : MonoBehaviour
         // rotate the zombie to face the target
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
-
 
     void Update()
     {

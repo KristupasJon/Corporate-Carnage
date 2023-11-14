@@ -242,6 +242,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: blood1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 62
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b502ea5ae8f7dd64287f797d732b4aec
+      internalID: -1733140892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood2
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 39
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db719daf1a3d4c43a4fdbf10b2fe557
+      internalID: -280252582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 32
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f2fad43e9060f448a56387223cccb5
+      internalID: 1925231021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 15
+        width: 28
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1642b6189d849144e8d133614da60e48
+      internalID: -10155658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -253,17 +337,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      blood1: -946720545
+      blood2: -1188431079
+      blood3: 494348758
+      blood4: -799754024
       zombiebasic_0: 76108137
       zombiebasic_1: 480500418
-      zombiebasic_10: -799754024
       zombiebasic_11: 959023225
       zombiebasic_2: -606558383
       zombiebasic_3: 1601443817
       zombiebasic_4: -730681987
       zombiebasic_5: -65966737
-      zombiebasic_6: -946720545
-      zombiebasic_7: -1188431079
-      zombiebasic_8: 494348758
       zombiebasic_9: -912162959
   spritePackingTag: 
   pSDRemoveMatte: 0

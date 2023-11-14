@@ -8,6 +8,9 @@ public class AdamScript : MonoBehaviour
 
     // todo:
     // shooting animation doesnt work =(
+    // create tutorial/demo
+    // make the screen red on hit
+    // add new fonts
     // make it so that the game deosnt crash when the player dies
     // add background music
     // improve zombie ai and player tracking around objects

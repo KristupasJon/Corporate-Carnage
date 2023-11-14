@@ -46,4 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 4070924111573317492, guid: ee3496d25b6df9441864b6e67d9ad57e, type: 3}
   target: {fileID: 0}
-  spawnInterval: 1
+  gotShotSound: {fileID: 0}
+  bloodObject: {fileID: 0}
+  deathBloodObject: {fileID: 0}
+  spawnInterval: 3
