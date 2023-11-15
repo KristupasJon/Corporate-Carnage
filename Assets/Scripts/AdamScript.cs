@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AdamScript : MonoBehaviour
@@ -8,7 +9,6 @@ public class AdamScript : MonoBehaviour
 
     // todo:
     // shooting animation doesnt work =(
-    // create tutorial/demo
     // make the screen red on hit
     // add new fonts
     // make it so that the game deosnt crash when the player dies
@@ -61,6 +61,10 @@ public class AdamScript : MonoBehaviour
         if (Input.GetKey(KeyCode.R) || bulletsInClip == 0)
         {
             Reload();
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
     }
@@ -117,10 +121,11 @@ public class AdamScript : MonoBehaviour
             {
                 //display a game over screen here
                 Debug.Log("ADAM IS DEAD!");
-                Destroy(gameObject);
-                alive = false;
+                //temp solution for now
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //alive = false;
             }
-            if(health > 0)
+            if (health > 0)
             {
                 StartCoroutine(DamageCooldown());
             }
@@ -180,15 +185,22 @@ public class AdamScript : MonoBehaviour
 
     void FireGun()
     {
-        if (Input.GetMouseButton(0) && !isReloading && bulletsInClip != 0)
+        if (Input.GetMouseButton(0) && animator.GetBool("Shoot") == false)
         {
-            //the shoot animation doesnt work...
-            animator.SetBool("Shoot", true);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1); // Play the gunshot sound
-            bulletsInClip--;
-            bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
-            animator.SetBool("Shoot", false);
+            if (!isReloading && bulletsInClip != 0)
+            {
+                //the shoot animation doesnt work...
+                animator.SetBool("Shoot", true);
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1); // Play the gunshot sound
+                bulletsInClip--;
+                bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
+                animator.SetBool("Shoot", false);
+            }
+        }
+        else
+        {
+            //animator.SetBool("Shoot", false);
         }
     }
 
