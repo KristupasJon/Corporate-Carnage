@@ -12,6 +12,7 @@ public class HandgunBulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Killable") || collision.gameObject.CompareTag("Indestruct"))
         {
             Destroy(gameObject);
+            Debug.Log("HIT");
         }
     }
 

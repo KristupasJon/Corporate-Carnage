@@ -13,14 +13,16 @@ public class AdamScript : MonoBehaviour
     // add new fonts
     // make it so that the game deosnt crash when the player dies
     // add background music
-    // improve zombie ai and player tracking around objects
 
     public float moveSpeed = 200f;
     public float sprintSpeed = 250f;
     public int health = 100;
+    public float maxStamina = 100;
+    private float currentStamina = 0;
     public bool alive = true;
     public Text healthUI;
     public Text bulletUI;
+    public Slider staminaUI;
     private Rigidbody2D rb;
     public Animator animator;
     private Vector2 movement;
@@ -40,7 +42,12 @@ public class AdamScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         bulletsInClip = maxBulletsInClip;
+        currentStamina = maxStamina;
+        staminaUI.maxValue = maxStamina;
+        staminaUI.value = maxStamina;
+
         InitUI();
     }
 
@@ -51,11 +58,16 @@ public class AdamScript : MonoBehaviour
         {
             FireGun();
         }
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R) || bulletsInClip == 0)
         {
             Reload();
         }
 
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     void InitUI()
@@ -64,9 +76,14 @@ public class AdamScript : MonoBehaviour
         bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
     }
 
-    void FixedUpdate()
+    public void UseStamina(float amount)
     {
-        Move();
+        if (currentStamina + amount >= 0 && currentStamina + amount <= maxStamina)
+        {
+            currentStamina += amount;
+            staminaUI.value = currentStamina;
+            Debug.Log(currentStamina);
+        }
     }
 
     void Reload()
@@ -142,14 +159,16 @@ public class AdamScript : MonoBehaviour
             movement = new Vector2(moveX, moveY);
             animator.SetFloat("Speed", movement.magnitude);
 
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && currentStamina > 0)
             {
                 // If Shift is being held down, increase the speed
                 rb.velocity = (movement * (moveSpeed + sprintSpeed)) * Time.deltaTime;
+                UseStamina(-1f);
             }
             else
             {
                 rb.velocity = (movement * moveSpeed) * Time.deltaTime;
+                UseStamina(1f);
             }
         }
         else

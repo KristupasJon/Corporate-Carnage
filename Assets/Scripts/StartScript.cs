@@ -12,7 +12,6 @@ public class StartScript : MonoBehaviour
 
     public void GoToGameScene()
     {
-        Application.targetFrameRate = 60;
         SceneManager.LoadScene(1);
         Debug.Log("Game Started!\n");
     }
