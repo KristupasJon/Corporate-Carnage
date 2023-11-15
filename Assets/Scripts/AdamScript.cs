@@ -178,13 +178,12 @@ public class AdamScript : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector2 direction = new(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y
-        );
+        Vector2 direction = mousePosition - transform.position;
 
-        transform.up = direction;
-        //the character sprite is facing the wrong way so this is an awkward fix for that
-        transform.Rotate(0, 0, 90);
+        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        firePoint.transform.rotation = transform.rotation;
+
     }
 }
