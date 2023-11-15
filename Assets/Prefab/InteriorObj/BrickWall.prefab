@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3205254759752794047}
   - component: {fileID: 3205254759752794044}
   - component: {fileID: 3205254759752794041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BrickWall
   m_TagString: Indestruct
   m_Icon: {fileID: 0}

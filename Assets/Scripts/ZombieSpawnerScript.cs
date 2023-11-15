@@ -13,6 +13,7 @@ public class ZombieSpawnerScript : MonoBehaviour
 
     private float timeSinceLastSpawn;
 
+    //DOESNT WORK ANYMORE
     void Update()
     {
         timeSinceLastSpawn += Time.deltaTime;
@@ -25,8 +26,7 @@ public class ZombieSpawnerScript : MonoBehaviour
             // Get the ZombieAI component of the zombie
             ZombieAI zombieAI = zombie.GetComponent<ZombieAI>();
             
-            // Assign the target to the zombie
-            zombieAI.target = target;
+            zombieAI.SetTarget(target);
             zombieAI.gotShotSound = gotShotSound;
             zombieAI.bloodObject = bloodObject;
             zombieAI.deathBloodObject = deathBloodObject;
