@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Killable
   - Bullet
   - Adam
   - Indestruct
+  - Power
+  - Enemy
+  - HealthPower
+  - AmmoPower
   layers:
   - Default
   - TransparentFX

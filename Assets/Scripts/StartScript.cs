@@ -7,7 +7,7 @@ public class StartScript : MonoBehaviour
 {
     void Start()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 144;
     }
 
     public void GoToGameScene()

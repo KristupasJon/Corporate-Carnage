@@ -10,7 +10,6 @@ public class ZombieAI : MonoBehaviour
     public Transform target;
     public GameObject bloodObject; // the blood object to spawn when shot
     public GameObject deathBloodObject; // the blood object to spawn when dies
-    public float speed = 2.0f; // speed of the zombie
     public int health = 20;
 
     private void Start()
@@ -31,7 +30,6 @@ public class ZombieAI : MonoBehaviour
             health -= 10;
             AudioSource.PlayClipAtPoint(gotShotSound, transform.position, 0.2f);
             Instantiate(bloodObject, new Vector3(transform.position.x, transform.position.y, 2), Quaternion.identity); // spawn blood object
-            speed *= 0.5f;
 
             if (health <= 0)
             {

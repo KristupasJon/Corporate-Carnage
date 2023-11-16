@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8622522615247671980}
   m_Layer: 0
   m_Name: TempArena
-  m_TagString: Untagged
+  m_TagString: Indestruct
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

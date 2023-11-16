@@ -32,6 +32,8 @@ public class AdamScript : MonoBehaviour
     public AudioClip gunShotSound;
     public AudioClip gettingPunchedSound;
     public AudioClip handgunReloadSound;
+    public AudioClip pickingUpHealth;
+    public AudioClip pickingUpAmmo;
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
     public int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
@@ -62,9 +64,11 @@ public class AdamScript : MonoBehaviour
         {
             Reload();
         }
+        // remove this later
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(0);
         }
 
     }
@@ -72,6 +76,7 @@ public class AdamScript : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        UseStamina(1);
     }
 
     void InitUI()
@@ -112,8 +117,8 @@ public class AdamScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //change this later, to either more descriptive tags or simply a sound manager
-        if (collision.gameObject.CompareTag("Killable") == true && !isCooldown)
+        //melee hit
+        if (collision.gameObject.CompareTag("Enemy") == true && !isCooldown)
         {
             AudioSource.PlayClipAtPoint(gettingPunchedSound, transform.position, 1);
             ChangeHealth(-10);
@@ -121,7 +126,7 @@ public class AdamScript : MonoBehaviour
             {
                 //display a game over screen here
                 Debug.Log("ADAM IS DEAD!");
-                //temp solution for now
+                //temp solution for now is to just reset the scene
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 //alive = false;
             }
@@ -129,6 +134,19 @@ public class AdamScript : MonoBehaviour
             {
                 StartCoroutine(DamageCooldown());
             }
+        }
+
+        //picking up powerup
+        if (collision.gameObject.CompareTag("HealthPower") == true)
+        {
+            AudioSource.PlayClipAtPoint(pickingUpHealth, transform.position, 1);
+            ChangeHealth(50);
+        }
+
+        if (collision.gameObject.CompareTag("AmmoPower") == true)
+        {
+            AudioSource.PlayClipAtPoint(pickingUpAmmo, transform.position, 1);
+            ChangeMaxAmmunition(100);
         }
     }
 
@@ -153,6 +171,11 @@ public class AdamScript : MonoBehaviour
         health += x;
         healthUI.text = health.ToString();
     }
+    void ChangeMaxAmmunition(int x)
+    {
+        maxBulletsInClip += x;
+        bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
+    }
 
     void Move()
     {
@@ -168,12 +191,11 @@ public class AdamScript : MonoBehaviour
             {
                 // If Shift is being held down, increase the speed
                 rb.velocity = (movement * (moveSpeed + sprintSpeed)) * Time.deltaTime;
-                UseStamina(-1f);
+                UseStamina(-2f);
             }
             else
             {
                 rb.velocity = (movement * moveSpeed) * Time.deltaTime;
-                UseStamina(1f);
             }
         }
         else
