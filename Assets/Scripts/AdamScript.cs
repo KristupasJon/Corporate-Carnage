@@ -19,7 +19,6 @@ public class AdamScript : MonoBehaviour
     public int health = 100;
     public float maxStamina = 100;
     private float currentStamina = 0;
-    public bool alive = true;
     public Text healthUI;
     public Text bulletUI;
     public Slider staminaUI;
@@ -38,6 +37,8 @@ public class AdamScript : MonoBehaviour
     private int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
     public bool isReloading = false;
+    public GameObject GameOverScreen;
+    public GameObject PauseScreen;
 
 
     void Start()
@@ -55,22 +56,44 @@ public class AdamScript : MonoBehaviour
 
     void Update()
     {
-        FaceMouseCursor();
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.timeScale != 0)
         {
-            FireGun();
-        }
-        if (Input.GetKey(KeyCode.R) || bulletsInClip == 0)
-        {
-            Reload();
-        }
-        // remove this later
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene(0);
+            FaceMouseCursor();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                FireGun();
+            }
+            if (Input.GetKey(KeyCode.R) || bulletsInClip == 0)
+            {
+                Reload();
+            }
+            // REMOVE THIS LATER, THIS IS FOR DEBUGGING PURPOSES
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(0);
+            }
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!PauseScreen.activeInHierarchy)
+            {
+                PauseGame();
+            }
+            else if (PauseScreen.activeInHierarchy)
+            {
+                ContinueGame();
+            }
+        }
+
+    }
+
+    void Gameover()
+    {
+        GameOverScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 
     void FixedUpdate()
@@ -81,8 +104,22 @@ public class AdamScript : MonoBehaviour
 
     void InitUI()
     {
+        GameOverScreen.SetActive(false);
+        PauseScreen.SetActive(false);
         healthUI.text = health.ToString();
         bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
+    }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+        PauseScreen.SetActive(true);
+    }
+
+    private void ContinueGame()
+    {
+        Time.timeScale = 1;
+        PauseScreen.SetActive(false);
     }
 
     public void UseStamina(float amount)
@@ -106,9 +143,7 @@ public class AdamScript : MonoBehaviour
     IEnumerator ReloadCoroutine()
     {
         isReloading = true;
-        // Play reload sound
         AudioSource.PlayClipAtPoint(handgunReloadSound, transform.position, 1);
-        // Wait for 2 seconds
         yield return new WaitForSeconds(2);
         bulletsInClip = maxBulletsInClip;
         bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
@@ -117,18 +152,14 @@ public class AdamScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //melee hit
-        if (collision.gameObject.CompareTag("Enemy") == true && !isCooldown)
+        if ((collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Bullet")) == true && !isCooldown)
         {
             AudioSource.PlayClipAtPoint(gettingPunchedSound, transform.position, 1);
             ChangeHealth(-10);
             if (health <= 0)
             {
-                //display a game over screen here
-                Debug.Log("ADAM IS DEAD!");
-                //temp solution for now is to just reset the scene
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                //alive = false;
+                Debug.Log("Game Over Adam is dead!");
+                Gameover();
             }
             if (health > 0)
             {
@@ -136,24 +167,23 @@ public class AdamScript : MonoBehaviour
             }
         }
 
-        //picking up powerup
         if (collision.gameObject.CompareTag("HealthPower") == true)
         {
             AudioSource.PlayClipAtPoint(pickingUpHealth, transform.position, 1);
-            ChangeHealth(50);
+            ChangeHealth(25);
         }
 
         if (collision.gameObject.CompareTag("AmmoPower") == true)
         {
             AudioSource.PlayClipAtPoint(pickingUpAmmo, transform.position, 1);
-            ChangeMaxAmmunition(100);
+            ChangeMaxAmmunition(5);
         }
     }
 
     IEnumerator DamageCooldown()
     {
-        isCooldown = true; // Set cooldown flag to true
-        float endTime = Time.time + 3.0f; // Set the end time for the cooldown
+        isCooldown = true; 
+        float endTime = Time.time + 3.0f; 
 
         // Blinking effect
         while (Time.time < endTime)
@@ -162,7 +192,7 @@ public class AdamScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        spriteRenderer.enabled = true; // Make sure the sprite is visible at the end of the cooldown
+        spriteRenderer.enabled = true;
         isCooldown = false;
     }
 
@@ -214,7 +244,7 @@ public class AdamScript : MonoBehaviour
                 //the shoot animation doesnt work...
                 animator.SetBool("Shoot", true);
                 Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-                AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1); // Play the gunshot sound
+                AudioSource.PlayClipAtPoint(gunShotSound, transform.position, 1);
                 bulletsInClip--;
                 bulletUI.text = bulletsInClip.ToString() + "/" + maxBulletsInClip.ToString();
                 animator.SetBool("Shoot", false);
