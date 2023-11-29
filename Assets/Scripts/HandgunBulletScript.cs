@@ -9,7 +9,9 @@ public class HandgunBulletScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Indestruct"))
+        if (collision.gameObject.CompareTag("Enemy") || 
+            collision.gameObject.CompareTag("Indestruct") ||
+            collision.gameObject.CompareTag("Adam"))
         {
             Destroy(gameObject);
         }

@@ -35,7 +35,7 @@ public class AdamScript : MonoBehaviour
     public AudioClip pickingUpHealth;
     public AudioClip pickingUpAmmo;
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
-    public int bulletsInClip = 10;
+    private int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
     public bool isReloading = false;
 
