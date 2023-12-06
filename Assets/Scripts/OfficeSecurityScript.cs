@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class OfficeSecurityScript : MonoBehaviour
 {
+    //TODO NEED ANIMATIONS AND ASSETS FOR THIS ENEMY
+
     public int health = 100;
     //public Animator animator;
     public GameObject bulletPrefab;
@@ -14,6 +16,8 @@ public class OfficeSecurityScript : MonoBehaviour
     public AudioClip gunShotSound;
     public AudioClip gettingPunchedSound;
     public AudioClip handgunReloadSound;
+    public GameObject bloodObject; // the blood object to spawn when shot
+    public GameObject deathBloodObject; // the blood object to spawn when dies
     private int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
     public bool isReloading = false;
@@ -24,6 +28,7 @@ public class OfficeSecurityScript : MonoBehaviour
     void Start()
     {
         bulletsInClip = maxBulletsInClip;
+    
     }
 
     void Update()
@@ -59,18 +64,11 @@ public class OfficeSecurityScript : MonoBehaviour
             // Calculate the direction vector from the sprite to Adam
             Vector3 direction = adam.transform.position - transform.position;
 
-            // Get the sprite renderer component
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            // Calculate the angle to rotate
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90; // Subtract 90 if your sprite is facing upwards
 
-            // Update the facing direction based on the direction vector
-            if (direction.x > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else
-            {
-                spriteRenderer.flipX = true;
-            }
+            // Rotate the object to face Adam
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
 
@@ -107,8 +105,10 @@ public class OfficeSecurityScript : MonoBehaviour
     void ChangeHealth(int x)
     {
         health += x;
+        Instantiate(bloodObject, new Vector3(transform.position.x, transform.position.y, 2), Quaternion.identity); // spawn blood object
         if (health == 0)
         {
+            Instantiate(deathBloodObject, new Vector3(transform.position.x, transform.position.y, 2), Quaternion.identity); // spawn death blood object
             Destroy(gameObject);
         }
     }

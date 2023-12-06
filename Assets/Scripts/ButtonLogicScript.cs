@@ -7,6 +7,13 @@ public class ButtonLogicScript : MonoBehaviour
 {
     public GameObject PauseScreen;
     // Start is called before the first frame update
+    public void NextLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(3);
+        Debug.Log("Game Unpaused, transitioning to the next level!");
+    }
+
     public void ContinueGame()
     {
         Time.timeScale = 1;

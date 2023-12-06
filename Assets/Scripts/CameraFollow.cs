@@ -5,11 +5,6 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public float smoothSpeed = 0.125f;
 
-    private void Start()
-    {
-        Application.targetFrameRate = 144;
-    }
-
     void FixedUpdate()
     {
         Vector3 desiredPosition = new(target.position.x, target.position.y, -10);

@@ -8,10 +8,12 @@ public class AdamScript : MonoBehaviour
 {
 
     // todo:
+    // victory screen
+    // tutorial level on menu?
+    //
     // shooting animation doesnt work =(
     // make the screen red on hit
-    // add new fonts
-    // make it so that the game deosnt crash when the player dies
+    // 
     // add background music
 
     public float moveSpeed = 200f;
