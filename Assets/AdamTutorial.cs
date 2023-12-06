@@ -9,10 +9,9 @@ public class AdamTutorial : MonoBehaviour
     public GameObject DamageMessage;
     public GameObject ReloadMessage;
     public GameObject HealthPowerMessage;
-    public GameObject EndingScreen; // The ending screen you want to display when all enemies are dead
-    public AdamScript Adam; // Assuming AdamScript is the name of the script attached to the Adam object
+    public GameObject EndingScreen;
+    public AdamScript Adam;
     private int adamhealth;
-    private int adamClip;
     private bool damageMsg = false;
     private bool reloadMsg = false;
     private bool healthpower = false;
@@ -22,7 +21,6 @@ public class AdamTutorial : MonoBehaviour
         Time.timeScale = 0;
         StartCoroutine(EnableForSeconds(FirstMessage, 3));
         adamhealth = Adam.health;
-        adamClip = Adam.bulletsInClip;
     }
 
     void Update()
@@ -70,8 +68,8 @@ public class AdamTutorial : MonoBehaviour
         obj.SetActive(true);
         yield return new WaitForSecondsRealtime(seconds);
         obj.SetActive(false);
-        yield return new WaitForSecondsRealtime(5); // Wait an additional 5 seconds
-        SceneManager.LoadScene(sceneIndex); // Load the new scene
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void RetryTutorial()

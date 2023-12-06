@@ -10,7 +10,7 @@ public class ButtonLogicScript : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(0);
         Debug.Log("Game Unpaused, transitioning to the next level!");
     }
 
