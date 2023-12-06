@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class OfficeSecurityScript : MonoBehaviour
 {
-    //TODO NEED ANIMATIONS AND ASSETS FOR THIS ENEMY
-
     public int health = 100;
     //public Animator animator;
     public GameObject bulletPrefab;

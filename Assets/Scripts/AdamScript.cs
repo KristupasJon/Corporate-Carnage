@@ -36,7 +36,7 @@ public class AdamScript : MonoBehaviour
     public AudioClip pickingUpHealth;
     public AudioClip pickingUpAmmo;
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
-    private int bulletsInClip = 10;
+    public int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
     public bool isReloading = false;
     public GameObject GameOverScreen;
@@ -68,12 +68,6 @@ public class AdamScript : MonoBehaviour
             if (Input.GetKey(KeyCode.R) || bulletsInClip == 0)
             {
                 Reload();
-            }
-            // REMOVE THIS LATER, THIS IS FOR DEBUGGING PURPOSES
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                SceneManager.LoadScene(0);
             }
         }
 
