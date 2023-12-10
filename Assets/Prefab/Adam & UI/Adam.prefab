@@ -153,7 +153,8 @@ MonoBehaviour:
   handgunReloadSound: {fileID: 8300000, guid: 657ce346ade7e6b4c8b8a0bd9e14c4fd, type: 3}
   pickingUpHealth: {fileID: 8300000, guid: a9e1c3e1b67a9f644a08a33cda107dc9, type: 3}
   pickingUpAmmo: {fileID: 8300000, guid: 8e472c00c4326c94bb08c446c45b1456, type: 3}
-  maxBulletsInClip: 25
+  bulletsInClip: 10
+  maxBulletsInClip: 40
   isReloading: 0
   GameOverScreen: {fileID: 0}
   PauseScreen: {fileID: 0}

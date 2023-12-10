@@ -25,6 +25,7 @@ public class AdamScript : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     private bool isCooldown = false; // Flag to check if invunerability is active
+    private bool isTired = false; // Flag to check if stamina bar is empty
     public AudioClip gunShotSound;
     public AudioClip gettingPunchedSound;
     public AudioClip handgunReloadSound;
@@ -121,6 +122,11 @@ public class AdamScript : MonoBehaviour
             staminaUI.value = currentStamina;
             Debug.Log(currentStamina);
         }
+
+        if(currentStamina == maxStamina && isTired == true)
+        {
+            isTired = false;
+        }
     }
 
     void Reload()
@@ -208,11 +214,12 @@ public class AdamScript : MonoBehaviour
             movement = new Vector2(moveX, moveY);
             animator.SetFloat("Speed", movement.magnitude);
 
-            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && currentStamina > 0)
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && currentStamina > 0 && isTired == false)
             {
                 // If Shift is being held down, increase the speed
                 rb.velocity = (movement * (moveSpeed + sprintSpeed)) * Time.deltaTime;
-                UseStamina(-2f);
+                UseStamina(-1.5f);
+                isTired = (currentStamina <= 0);
             }
             else
             {
