@@ -8,25 +8,24 @@ using UnityEngine.UI;
 public class OfficeSecurityScript : MonoBehaviour
 {
     public int health = 100;
-    //public Animator animator;
     public GameObject bulletPrefab;
     public Transform firePoint;
     public AudioClip gunShotSound;
     public AudioClip gettingPunchedSound;
     public AudioClip handgunReloadSound;
-    public GameObject bloodObject; // the blood object to spawn when shot
-    public GameObject deathBloodObject; // the blood object to spawn when dies
+    public GameObject bloodObject;
+    public GameObject deathBloodObject;
     private int bulletsInClip = 10;
     public int maxBulletsInClip = 10;
     public bool isReloading = false;
 
     public float shootingTime = 3f; // Shooting interval in seconds
-    private float nextShotTime = 0f; // Time of the next allowed shot
+    private float nextShotTime = 0; // Time of the next allowed shot
 
     void Start()
     {
         bulletsInClip = maxBulletsInClip;
-    
+        nextShotTime = shootingTime;
     }
 
     void Update()
@@ -69,9 +68,6 @@ public class OfficeSecurityScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
-
-
-
     void Reload()
     {
         if (!isReloading)

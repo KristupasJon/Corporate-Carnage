@@ -8,11 +8,6 @@ public class AdamScript : MonoBehaviour
 {
 
     // todo:
-    // victory screen
-    // tutorial level on menu?
-    //
-    // shooting animation doesnt work =(
-    // make the screen red on hit
     // 
     // add background music
 

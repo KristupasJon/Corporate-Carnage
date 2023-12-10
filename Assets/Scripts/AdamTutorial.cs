@@ -75,7 +75,7 @@ public class AdamTutorial : MonoBehaviour
     public void RetryTutorial()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Tutorial is reset");
     }
 }

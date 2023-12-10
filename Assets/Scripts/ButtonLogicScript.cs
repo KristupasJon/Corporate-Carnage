@@ -6,11 +6,22 @@ using UnityEngine.SceneManagement;
 public class ButtonLogicScript : MonoBehaviour
 {
     public GameObject PauseScreen;
-    // Start is called before the first frame update
-    public void NextLevel()
+    //this function exists because I am a failure and made the scenes in a bad order. The very
+    //first gameplay scene is made before the trivial other scenes in the menu.
+    //too lazy to refactor everything
+    public void NextLevel_first()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
+        Debug.Log("Game Unpaused, transitioning to the next level!");
+    }
+
+    public void NextLevel_continious()
+    {
+        Time.timeScale = 1;
+        Scene currentScene = SceneManager.GetActiveScene();
+        int buildIndex = currentScene.buildIndex;
+        SceneManager.LoadScene(buildIndex + 1);
         Debug.Log("Game Unpaused, transitioning to the next level!");
     }
 
@@ -18,14 +29,14 @@ public class ButtonLogicScript : MonoBehaviour
     {
         Time.timeScale = 1;
         PauseScreen.SetActive(false);
-        Debug.Log("Game Unpaused");
+        Debug.Log("Game Unpaused.");
     }
     public void RetryGame()
     {
         PauseScreen.SetActive(false);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
-        Debug.Log("Game was reset by user");
+        Debug.Log("Game was reset by user.");
     }
 
     public void GoToMenu()
@@ -33,6 +44,6 @@ public class ButtonLogicScript : MonoBehaviour
         PauseScreen.SetActive(false);
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
-        Debug.Log("Player went to menu");
+        Debug.Log("Player went to menu.");
     }
 }

@@ -161,10 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120b7fecd08a5334785625976e78438c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotShotSound: {fileID: 0}
+  gotShotSound: {fileID: 8300000, guid: 6786f4f5557dabd479cff8a135c10a0b, type: 3}
   target: {fileID: 0}
-  bloodObject: {fileID: 0}
-  deathBloodObject: {fileID: 0}
+  bloodObject: {fileID: 4803885324735462326, guid: c0cb5d1617e0a8744a8784fab60b710e, type: 3}
+  deathBloodObject: {fileID: 3586503323827808642, guid: e0310a6b349645d4d920c546dbb245a1, type: 3}
   health: 50
 --- !u!114 &-6010088407670633916
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   radius: 2
   height: 2
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 10
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
