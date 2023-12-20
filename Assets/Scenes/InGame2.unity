@@ -7205,6 +7205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1105232018080313112, guid: b238a2ee229b87c469ef445f55f430ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3851655548501623468, guid: b238a2ee229b87c469ef445f55f430ae, type: 3}
       propertyPath: m_RootOrder
       value: 19
