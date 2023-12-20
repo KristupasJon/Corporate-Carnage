@@ -4493,7 +4493,7 @@ PrefabInstance:
       objectReference: {fileID: 370359685}
     - target: {fileID: 6868768262566569474, guid: 44444682d43211148a944b19c7b795ac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMenu
+      value: NextLevel_continious
       objectReference: {fileID: 0}
     - target: {fileID: 6868768262921240669, guid: 44444682d43211148a944b19c7b795ac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
